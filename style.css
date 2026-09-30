@@ -134,6 +134,40 @@ section h2 {
   animation: rise 0.9s ease-out 0.25s both;
 }
 
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hello {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+  animation: rise 0.9s ease-out both;
+}
+
+.profile-photo {
+  width: 9rem;
+  height: 9rem;
+  flex-shrink: 0;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  object-fit: cover;
+  animation: rise 0.9s ease-out 0.4s both;
+  transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
 @keyframes rise {
   from {
     opacity: 0;
@@ -305,6 +339,24 @@ section h2 {
   gap: 1.5rem;
 }
 
+.btn-contact {
+  display: inline-block;
+  padding: 0.55rem 1.25rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.4rem;
+  background-color: transparent;
+  color: var(--accent);
+  font-size: 0.95rem;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn-contact:hover,
+.btn-contact:focus-visible {
+  background-color: var(--accent);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
 /* ---------- Footer ---------- */
 .footer {
   display: flex;
@@ -318,6 +370,16 @@ section h2 {
 
 /* ---------- Media query: small screens ---------- */
 @media (max-width: 40rem) {
+  .hero {
+    flex-direction: column-reverse;
+    gap: 1.25rem;
+  }
+
+  .profile-photo {
+    width: 6.5rem;
+    height: 6.5rem;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
