@@ -1,4 +1,4 @@
-/* ---------- Reset and base (box model, units, inheritance) ---------- */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,7 +61,6 @@ section h2 {
   margin-bottom: 1.5rem;
 }
 
-/* ---------- Header: sticky positioning + flexbox ---------- */
 .site-header {
   position: sticky;
   top: 0;
@@ -115,7 +114,7 @@ section h2 {
   width: 100%;
 }
 
-/* ---------- Hero: keyframe animation on page load ---------- */
+
 .hero {
   padding: 5rem 0 4rem;
   border-top: none;
@@ -142,14 +141,14 @@ section h2 {
 }
 
 .hero-text {
-  flex: 1;
+  flex: 2;
 }
 
 .hello {
   display: inline-block;
   margin-bottom: 0.75rem;
   color: var(--accent);
-  font-size: 0.95rem;
+  font-size: rem;
   animation: rise 0.9s ease-out both;
 }
 
@@ -164,9 +163,7 @@ section h2 {
   transition: transform 0.3s;
 }
 
-.profile-photo:hover {
-  transform: scale(1.05);
-}
+
 
 @keyframes rise {
   from {
@@ -179,7 +176,7 @@ section h2 {
   }
 }
 
-/* ---------- Projects: grid layout ---------- */
+
 .project {
   display: grid;
   grid-template-columns: 6rem 1fr;
@@ -252,7 +249,7 @@ section h2 {
   }
 }
 
-/* ---------- Tags and links: flexbox ---------- */
+
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -288,7 +285,7 @@ section h2 {
   border-color: var(--accent);
 }
 
-/* ---------- Skills: grid ---------- */
+
 .skills {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -314,7 +311,7 @@ section h2 {
   font-size: 1.3rem;
 }
 
-/* ---------- Writings, education, contact ---------- */
+
 .post small,
 .edu small {
   color: var(--muted);
@@ -368,7 +365,7 @@ section h2 {
   font-size: 0.9rem;
 }
 
-/* ---------- Media query: small screens ---------- */
+
 @media (max-width: 40rem) {
   .hero {
     flex-direction: column-reverse;
